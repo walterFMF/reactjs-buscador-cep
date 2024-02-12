@@ -17,13 +17,14 @@ function App() {
     try{
       const response = await api.get(`${input}/json`)
       setCep(response.data)
-    }catch (error) {       
-      setInput();
+      setInput("");
+    }catch (error) {             
       setCep({})
       alert("Ops Erro ao buscar cep");
-      console.log(`Error capturado: ${error}`);
-    
+      console.log(`Error capturado: ${error}`);    
+      setInput("");
     }
+    
   }
 
   return (
@@ -38,8 +39,12 @@ function App() {
           value={input}
           onChange={(e) => {
             setInput(e.target.value)
-          }
-          } />
+          }}
+          onKeyUp={(key) => {
+            if(key.code == "Enter"){
+              handleSearch()
+            }
+          }}/>
 
         <button className='buttonSearch'
           onClick={handleSearch}>
