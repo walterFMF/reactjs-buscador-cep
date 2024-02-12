@@ -1,11 +1,17 @@
 import InputBuscador from "./inputBuscador";
-
-export default function ContainerInputBuscador(props){
+import { FiSearch } from 'react-icons/fi'
+export default function ContainerInputBuscador(props) {
     return (
-        <InputBuscador 
-            setInput={props.setInput}             
-            handleSearch={props.handleSearch}
-            input={props.input}
-        />
+        <>
+            <InputBuscador
+                setInput={props.setInput}
+                handleSearch={props.handleSearch}
+                input={props.input}
+            />
+            <button className='buttonSearch'
+                onClick={props.handleSearch}>
+                <FiSearch size={25} color="#fff" />
+            </button>
+        </>
     )
 }
