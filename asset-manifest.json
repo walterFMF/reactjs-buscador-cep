@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/walterFMF/reactjs-buscador-cep/static/css/main.86b5cef0.css",
-    "main.js": "/walterFMF/reactjs-buscador-cep/static/js/main.f70a7fb1.js",
-    "static/js/592.04951bcc.chunk.js": "/walterFMF/reactjs-buscador-cep/static/js/592.04951bcc.chunk.js",
-    "index.html": "/walterFMF/reactjs-buscador-cep/index.html",
-    "main.86b5cef0.css.map": "/walterFMF/reactjs-buscador-cep/static/css/main.86b5cef0.css.map",
-    "main.f70a7fb1.js.map": "/walterFMF/reactjs-buscador-cep/static/js/main.f70a7fb1.js.map",
-    "592.04951bcc.chunk.js.map": "/walterFMF/reactjs-buscador-cep/static/js/592.04951bcc.chunk.js.map"
+    "main.css": "/reactjs-buscador-cep/static/css/main.86b5cef0.css",
+    "main.js": "/reactjs-buscador-cep/static/js/main.9adf288f.js",
+    "static/js/592.04951bcc.chunk.js": "/reactjs-buscador-cep/static/js/592.04951bcc.chunk.js",
+    "index.html": "/reactjs-buscador-cep/index.html",
+    "main.86b5cef0.css.map": "/reactjs-buscador-cep/static/css/main.86b5cef0.css.map",
+    "main.9adf288f.js.map": "/reactjs-buscador-cep/static/js/main.9adf288f.js.map",
+    "592.04951bcc.chunk.js.map": "/reactjs-buscador-cep/static/js/592.04951bcc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.86b5cef0.css",
-    "static/js/main.f70a7fb1.js"
+    "static/js/main.9adf288f.js"
   ]
 }
