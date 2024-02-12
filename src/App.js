@@ -3,6 +3,7 @@ import { FiSearch } from 'react-icons/fi'
 import './styles.css'
 
 import api from './services/api';
+import ContainerInputBuscador from './components/containerInputBuscador';
 
 function App() {
 
@@ -23,8 +24,7 @@ function App() {
       alert("Ops Erro ao buscar cep");
       console.log(`Error capturado: ${error}`);    
       setInput("");
-    }
-    
+    }    
   }
 
   return (
@@ -32,20 +32,11 @@ function App() {
       <h1 className="title">Buscador CEP</h1>
 
       <div className='containerInput'>
-
-        <input
-          type='text'
-          placeholder='Digite um cep...'
-          value={input}
-          onChange={(e) => {
-            setInput(e.target.value)
-          }}
-          onKeyUp={(key) => {
-            if(key.code == "Enter"){
-              handleSearch()
-            }
-          }}/>
-
+        <ContainerInputBuscador           
+          setInput={setInput} 
+          handleSearch={handleSearch}
+          input={input}
+        />
         <button className='buttonSearch'
           onClick={handleSearch}>
           <FiSearch size={25} color="#fff" />
@@ -56,7 +47,9 @@ function App() {
         <main className='main'>
           <h2>CEP: {cep.cep}</h2>
           <span>Rua: {cep.logradouro}</span>
-          <span>Complemento: {cep.complemento ?? 'Sem complemento'}</span>
+          {Object.keys(cep.complemento).length > 0 && (    
+          <span>Complemento: {cep.complemento}</span>
+          )}
           <span>{cep.bairro} </span>
           <span>{cep.localidade} - {cep.uf}</span>
         </main>
